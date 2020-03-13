@@ -2,8 +2,8 @@
 
 ERP beyond your fridge - now containerized! This is the docker repo of [grocy](https://github.com/grocy/grocy).
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/grocy/grocy-docker.svg)](https://hub.docker.com/r/grocy/grocy-docker/)
-[![Docker Stars](https://img.shields.io/docker/stars/grocy/grocy-docker.svg)](https://hub.docker.com/r/grocy/grocy-docker/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mhzawadi/grocy.svg)](https://hub.docker.com/r/mhzawadi/grocy/)
+[![Docker Stars](https://img.shields.io/docker/stars/mhzawadi/grocy.svg)](https://hub.docker.com/r/mhzawadi/grocy/)
 
 ## Install Docker
 
@@ -25,15 +25,16 @@ Note: if you have not pulled any of the images from the repository, when you do 
 ### To pull the latest images to your machine:
 
 ```
-docker pull grocy/grocy-docker:nginx
-docker pull grocy/grocy-docker:grocy
+docker pull mhzawadi/grocy
 ```
 
 Or just `docker-compose pull`.
 
 ### Environmental variables:
 
-As of grocy v.1.24.1, ENV variables are accessible via the `docker-compose.yml` file as long as they are prefixed by `GROCY_`. For example, to change the language from english to french, you can modify
+None as of yet
+
+<!-- As of grocy v.1.24.1, ENV variables are accessible via the `docker-compose.yml` file as long as they are prefixed by `GROCY_`. For example, to change the language from english to french, you can modify
 
 ```
 GROCY_CULTURE: en
@@ -43,7 +44,7 @@ to
 
 ```
 GROCY_CULTURE: fr
-```
+``` -->
 
 ### To build from scratch
 

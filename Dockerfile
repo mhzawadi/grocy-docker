@@ -1,4 +1,3 @@
-
 FROM alpine:3.11
 MAINTAINER Matthew Horwood <matt@horwood.biz>
 
@@ -16,6 +15,7 @@ ADD https://github.com/grocy/grocy/releases/download/v2.6.1/grocy_2.6.1.zip /var
 
 # run php composer.phar with -vvv for extra debug information
 RUN unzip grocy_2.6.1.zip && \
+    rm -f grocy_2.6.1.zip && \
     cp config-dist.php data/config.php && \
     mkdir viewcache && \
     chmod +x /config/start.sh; \
@@ -24,7 +24,7 @@ RUN unzip grocy_2.6.1.zip && \
     chown nobody:nginx /var/www/html/* -R;
 
 # Expose volumes
-VOLUME ["/var/www/html"]
+VOLUME ["/var/www/html/data"]
 
 # Expose ports
 EXPOSE 80
